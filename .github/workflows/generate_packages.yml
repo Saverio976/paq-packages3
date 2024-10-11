@@ -50,14 +50,14 @@ jobs:
 
   generate-packages-alacritty:
     permissions: write-all
-    name: Generate Packages Some 1
+    name: Generate Packages Alacritty
     outputs:
       failed: ${{ steps.failed.outputs.failed }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Package FlashBackToTheFuture
+      - name: Generate Package alacritty
         run: .github/workflows/generate_package.sh "./packages/alacritty" "./packages/westerm"
 
       - name: Upload zip
@@ -71,14 +71,14 @@ jobs:
 
   generate-packages-wezterm:
     permissions: write-all
-    name: Generate Packages Some 1
+    name: Generate Packages Wezterm
     outputs:
       failed: ${{ steps.failed.outputs.failed }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Generate Package FlashBackToTheFuture
+      - name: Generate Package wezterm
         run: .github/workflows/generate_package.sh "./packages/wezterm"
 
       - name: Upload zip
