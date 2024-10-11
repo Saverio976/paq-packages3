@@ -129,7 +129,7 @@ def process_packages():
     from github import Github
 
     g = Github()
-    packages = g.get_repo("Saverio976/paq-packages1").get_latest_release().get_assets()
+    packages = g.get_repo("Saverio976/paq-packages3").get_latest_release().get_assets()
 
     for package in packages:
         if package.name == "paq-packages.toml":
